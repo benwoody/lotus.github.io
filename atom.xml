@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+   <title>Lotus</title>
+   <subtitle>Lotus framework blog</subtitle>
+   <link href="http://lotusrb.org/atom.xml" rel="self"/>
+   <link href="http://lotusrb.org/blog"/>
+   <updated>2015-01-01T14:26:00+01:00</updated>
+   <id>http://lotusrb.org/blog</id>
+   <author>
+     <name>Lotus</name>
+     <email>admin@lotusrb.org</email>
+   </author>
+
+     <entry>
+       <title>A New Roadmap For Lotus</title>
+       <id>http://lotusrb.org/blog/2015/01/01/a-new-roadmap-for-lotus.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/01/01/a-new-roadmap-for-lotus.html"/>
+       <updated>2015-01-01T14:26:00+01:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Learn from past mistakes, clarify goals, communicate intent, Core Team and priorities such as stability and security. This is the new Lotus roadmap.
+
+       </summary>
+       <content type="html"><![CDATA[<p>Last year <a href="http://lucaguidi.com/2014/12/23/2014-retrospective-a-year-of-lotus.html">was great</a>, and 2015 brings new challenges to Lotus.</p>
+
+<h2>Learn from mistakes</h2>
+
+<p>When I released the first version back in June it was a wild, unexpected success.
+There was an uncommon hype for the initial version of a <em>&ldquo;yet another web framework for Ruby&rdquo;</em>.</p>
+
+<p>Probably, Lotus&rsquo; vision met the needs of a lot of developers in our Community.
+The demand of a rich, stable ecosystem of libraries and patterns to build applications that are dead simple to build and maintain.</p>
+
+<p>But then there was six months of <em>&ldquo;communication black-out&rdquo;</em>.
+All the people whom actively followed the project, were aware that we were making some progress.
+This wasn&rsquo;t true for the <em>&ldquo;outside world&rdquo;</em>, which is made of the rest of the Ruby and tech Community.
+For those people, Lotus went out of the radar.</p>
+
+<p><strong>This was clearly my mistake.</strong></p>
+
+<p>The result was an unenthusiastic reaction for the last release of December, even if it shipped <strong>long time requested features</strong> like application generator or code reloading.</p>
+
+<p>I&rsquo;ve learned that Open Source isn&rsquo;t only about making the code accessible, but it&rsquo;s about <strong>openness</strong>: take collaborative decisions and be transparent.
+I have a clear vision for Lotus, but I poorly communicated the idea in the last months.</p>
+
+<p><strong>Lotus aims to be a complete, lightweight and stable alternative to build web applications with Ruby.</strong></p>
+
+<h2>Fixing those mistakes</h2>
+
+<p>Now that I have clarified the ultimate purpose of the project, how to get there?</p>
+
+<p>We&rsquo;re activating new collaboration channels to serve our goal.
+In the making there is <strong>a new website</strong>, where to find <strong>guides</strong> and a <strong>blog</strong> to keep people updated on what&rsquo;s going on.
+We&rsquo;re also activating a forum where to <strong>discuss features</strong> and <strong>disclose security alerts</strong>.</p>
+
+<p>Once features are be defined and prioritized for a milestone, you can track the planned, the current and the released functionalities so far.
+You can use this <a href="http://bit.ly/lotusrb-roadmap">board</a> to visualize the progress.</p>
+
+<h2>Core Team</h2>
+
+<p>Until now, Lotus was a project which taken the direction that I decided only by myself.
+This was useful to move fast at the beginning, to express with code my initial imprint and to lay solid foundations for that idea.</p>
+
+<p>But Lotus is an ambitious project who can&rsquo;t survive with only one individual.
+I understood the need of <a href="https://www.youtube.com/watch?v=YqXU4o24Hkg">diversity</a>, and bring real world experiences in the creation process.</p>
+
+<p>Starting from today, <a href="http://ruby-journal.com">Trung Lê</a> (<a href="https://github.com/joneslee85">@joneslee85</a>) will be part of the <strong>Lotus Core Team</strong>.
+Trung works at <a href="http://www.envato.com/">Envato</a> and on <a href="https://spreecommerce.com/">Spree Commerce</a>.
+In the last months, we have been discussing every day about the direction of Lotus and his tireless dedication made <a href="https://github.com/lotus/model">Lotus::Model</a> easier to use.
+Thank you Trung, welcome aboard.</p>
+
+<h2>Priorities</h2>
+
+<p>So far I have talked about communication, open decisions, core team.
+Those things are means to a few important values.</p>
+
+<h3>Stability</h3>
+
+<p>Lotus relies on <em>&ldquo;battle tested&rdquo;</em> libraries like <a href="https://github.com/rtomayko/tilt">Tilt</a>, <a href="http://sequel.jeremyevans.net/">Sequel</a>, <a href="http://rack.github.io">Rack</a>, but it still needs to reach its stability as a software.
+To fix blocking issues like bugs or improvements and release patch versions for them, will be our first priority.</p>
+
+<p>During the last year, there was too many people depending on the repository <code>HEAD</code>.
+This is bad because an application can suddenly break by updating gem dependencies.
+We highly recommend to use released versions from <a href="http://rubygems.org/gems/lotusrb">Rubygems</a>.</p>
+
+<p>We&rsquo;re also trying to <strong>avoid</strong> as much as possible <strong>breaking changes</strong> in the public API, even if we&rsquo;re under 1.0.
+Continuous, non-backward compatible reorganizations of code, destroy any chance that developers start an ecosystem around a technology.</p>
+
+<p>Think of <a href="http://www.rust-lang.org/">Rust</a>: it&rsquo;s a terrific and innovative language, but nearly nobody uses it.
+They kept changing too much, so companies were afraid of invest on it until now.</p>
+
+<h3>Features</h3>
+
+<p>The second priority is about features.
+We want to ship important functionalities to <strong>improve productivity</strong> and the overall <strong>experience with Lotus</strong>.
+Things like migrations, associations, assets management, HTML helpers, HTTP API architecture, will be released in the next months.</p>
+
+<h3>Security</h3>
+
+<p>We care about security.
+No vital application should be deployed in the wild without a serious assessment about data safety.
+Lotus will ship and <strong>activate by default</strong> mechanisms to protect applications and users from the most common attacks like <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> or <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">XSS</a>.</p>
+
+<p>But there is more: we want to write short guides to <strong>make developers aware of the security measures</strong> that they can use while building applications.</p>
+
+<h2>Conclusion</h2>
+
+<p>I hope this will be another outstanding year for Lotus.
+Please join us in this journey.</p>
+]]></content>
+     </entry>
+</feed>
