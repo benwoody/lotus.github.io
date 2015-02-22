@@ -4,13 +4,58 @@
    <subtitle>Lotus framework blog</subtitle>
    <link href="http://lotusrb.org/atom.xml" rel="self"/>
    <link href="http://lotusrb.org/blog"/>
-   <updated>2015-01-01T14:26:00+01:00</updated>
+   <updated>2015-02-22T11:03:00+01:00</updated>
    <id>http://lotusrb.org/blog</id>
    <author>
      <name>Lotus</name>
      <email>admin@lotusrb.org</email>
    </author>
 
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://lotusrb.org/blog/2015/02/22/weekly-changelog.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/02/22/weekly-changelog.html"/>
+       <updated>2015-02-22T11:03:00+01:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Changelog from Feb 16th to Feb 22th 2015
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Releases</h2>
+
+<ul>
+<li><a href="http://lotusrb.org">New website</a></li>
+<li><strong>Lotus::Model</strong> <code>v0.2.1</code> <a href="https://github.com/lotus/model/blob/master/CHANGELOG.md#v024---2015-02-20">details</a></li>
+</ul>
+
+<h2>Completed</h2>
+
+<ul>
+<li>Default response headers for <code>Lotus::Controller</code> [<a href="https://github.com/lotus/controller/pull/88">details</a>]</li>
+<li>View and Presenter autoescape [<a href="https://github.com/lotus/view/pull/60">details</a>]</li>
+<li><code>Lotus::Action::Params#get</code>: a safe API to access nested params (Example: <code>params.get(&#39;address.street&#39;)</code>) [<a href="https://github.com/lotus/controller/pull/89">details</a>]</li>
+<li><code>Lotus::Utils::String#titleize</code> [<a href="https://github.com/lotus/utils/pull/63">details</a>]</li>
+<li><code>Lotus::Utils::String#dasherize</code> [<a href="https://github.com/lotus/utils/pull/62">details</a>]</li>
+</ul>
+
+<h2>Development</h2>
+
+<ul>
+<li>Database migrations [<a href="https://github.com/lotus/model/pull/144">details</a>]</li>
+<li>Database console [<a href="https://github.com/lotus/lotus/pull/152">details</a>]</li>
+<li>Default security headers [<a href="https://github.com/lotus/lotus/pull/159">details</a>]</li>
+<li>Form helpers [<a href="https://github.com/lotus/helpers/pull/16">details</a>]</li>
+<li>Number formatting helpers [<a href="https://github.com/lotus/helpers/pull/14">details</a>]</li>
+<li>Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
      <entry>
        <title>A New Roadmap For Lotus</title>
        <id>http://lotusrb.org/blog/2015/01/01/a-new-roadmap-for-lotus.html</id>
