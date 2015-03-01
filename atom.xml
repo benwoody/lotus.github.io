@@ -4,13 +4,53 @@
    <subtitle>Lotus framework blog</subtitle>
    <link href="http://lotusrb.org/atom.xml" rel="self"/>
    <link href="http://lotusrb.org/blog"/>
-   <updated>2015-02-22T11:03:00+01:00</updated>
+   <updated>2015-03-01T16:44:00+01:00</updated>
    <id>http://lotusrb.org/blog</id>
    <author>
      <name>Lotus</name>
      <email>admin@lotusrb.org</email>
    </author>
 
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://lotusrb.org/blog/2015/03/01/weekly-changelog.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/03/01/weekly-changelog.html"/>
+       <updated>2015-03-01T16:44:00+01:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Changelog from Feb 23rd to Mar 1st 2015
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Releases</h2>
+
+<p>-</p>
+
+<h2>Completed</h2>
+
+<ul>
+<li>Database console [<a href="https://github.com/lotus/lotus/pull/152">details</a>]</li>
+<li>Default security headers [<a href="https://github.com/lotus/lotus/pull/159">details</a>]</li>
+<li>Initialize a Git repository when generate new applications [<a href="https://github.com/lotus/lotus/pull/163">details</a>]</li>
+<li>Generate a <code>.lotusrc</code> when generate new applications [<a href="https://github.com/lotus/lotus/pull/162">details</a>]</li>
+</ul>
+
+<h2>Development</h2>
+
+<ul>
+<li>Database migrations [<a href="https://github.com/lotus/model/pull/144">details</a>]</li>
+<li>Action generator [<a href="https://github.com/lotus/lotus/pull/166">details</a>]</li>
+<li>Form helpers [<a href="https://github.com/lotus/helpers/pull/16">details</a>]</li>
+<li>Number formatting helpers [<a href="https://github.com/lotus/helpers/pull/14">details</a>]</li>
+<li>Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
      <entry>
        <title>Weekly Changelog</title>
        <id>http://lotusrb.org/blog/2015/02/22/weekly-changelog.html</id>
