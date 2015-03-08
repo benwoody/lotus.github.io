@@ -4,13 +4,54 @@
    <subtitle>Lotus framework blog</subtitle>
    <link href="http://lotusrb.org/atom.xml" rel="self"/>
    <link href="http://lotusrb.org/blog"/>
-   <updated>2015-03-01T16:44:00+01:00</updated>
+   <updated>2015-03-08T10:29:00+01:00</updated>
    <id>http://lotusrb.org/blog</id>
    <author>
      <name>Lotus</name>
      <email>admin@lotusrb.org</email>
    </author>
 
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://lotusrb.org/blog/2015/03/08/weekly-changelog.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/03/08/weekly-changelog.html"/>
+       <updated>2015-03-08T10:29:00+01:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         Changelog from Mar 2nd to Mar 8th 2015
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Releases</h2>
+
+<p>-</p>
+
+<h2>Completed</h2>
+
+<ul>
+<li>HttpOnly cookies by default [<a href="https://github.com/lotus/lotus/pull/176">details</a>], [<a href="https://github.com/lotus/controller/pull/91">details</a>]</li>
+<li>Application generator: <code>--database</code> argument to setup database configuration [<a href="https://github.com/lotus/lotus/pull/169">details</a>]</li>
+<li>Changed SQLite3 extension from <code>.db</code> to <code>.sqlite3</code> [<a href="https://github.com/lotus/lotus/pull/158">details</a>]</li>
+<li>Renamed <code>lotus dbconsole</code> to <code>lotus db console</code> [<a href="https://github.com/lotus/lotus/pull/167">details</a>]</li>
+</ul>
+
+<h2>Development</h2>
+
+<ul>
+<li>Database migrations [<a href="https://github.com/lotus/model/pull/144">details</a>]</li>
+<li>Action generator [<a href="https://github.com/lotus/lotus/pull/166">details</a>]</li>
+<li>Lotus::Helpers integration in Lotus [<a href="https://github.com/lotus/lotus/pull/175">details</a>]</li>
+<li>Form helpers [<a href="https://github.com/lotus/helpers/pull/16">details</a>]</li>
+<li>Number formatting helpers [<a href="https://github.com/lotus/helpers/pull/14">details</a>]</li>
+<li>Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
      <entry>
        <title>Weekly Changelog</title>
        <id>http://lotusrb.org/blog/2015/03/01/weekly-changelog.html</id>
