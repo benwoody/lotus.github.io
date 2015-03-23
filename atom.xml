@@ -4,13 +4,107 @@
    <subtitle>Lotus framework blog</subtitle>
    <link href="http://lotusrb.org/atom.xml" rel="self"/>
    <link href="http://lotusrb.org/blog"/>
-   <updated>2015-03-22T09:10:00+01:00</updated>
+   <updated>2015-03-23T18:14:00+01:00</updated>
    <id>http://lotusrb.org/blog</id>
    <author>
      <name>Lotus</name>
      <email>admin@lotusrb.org</email>
    </author>
 
+     <entry>
+       <title>Announcing Lotus v0.3.0</title>
+       <id>http://lotusrb.org/blog/2015/03/23/announcing-lotus-030.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/03/23/announcing-lotus-030.html"/>
+       <updated>2015-03-23T18:14:00+01:00</updated>
+       <author>
+         <name>Luca Guidi</name>
+       </author>
+       <summary>
+         This is the most exciting Lotus release ever. We have new features, improved security, and more real world use cases.
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Stability and adoption</h2>
+
+<p>Lotus is getting more and more stable. This is the result of real world feedback of products that we are following closely during their development with Lotus.</p>
+
+<p>The first company that we are happy to give a warm welcome in our family is <strong><a href="https://dnsimple.com">DNSimple</a></strong>.
+They are <a href="https://speakerdeck.com/weppos/maintaining-a-5yo-ruby-project-shark-edition">maintaining</a> a rock solid Ruby code base that uses Rails for their flagship product and Lotus for their next HTTP API.</p>
+
+<h2>Security</h2>
+
+<p>Security is a vital factor for companies and a sensitive subject for users. A product won&rsquo;t survive if not proven secure.</p>
+
+<p>The Web is an insecure place. As a Community, we need to build a Security culture.
+Lotus wants to increase the level of awareness around this topic and provide defense mechanisms to common attacks.</p>
+
+<p>Please remember that <strong>there isn&rsquo;t a silver bullet</strong> when we talk about security. Nearly all protections can be debunked by experienced attackers. Developers should use all the available tools to make hackers&rsquo; life harder.</p>
+
+<h3>XSS</h3>
+
+<p><a href="https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29">XSS</a> (Cross Site Scripting) is one of the most <a href="https://www.owasp.org/index.php/Top10#OWASP_Top_10_for_2013">popular</a> threat for web applications. It&rsquo;s caused by unescaped malicious input, often sent with forms. Once the payload is on a web page, it can activate evil scripts to take over the control and eventually steal data (cookies).</p>
+
+<p>As first countermeasure, since now on, the output of views, helpers and presenters is <strong>escaped by default</strong>.</p>
+
+<p>Secondly, cookies will be sent with the <code>HttpOnly</code> option turned on. That means JavaScript won&rsquo;t be able to access them via <code>document.cookie</code>. If a malign script wants to steal data, it can&rsquo;t because the browser will stop it.</p>
+
+<p>We&rsquo;re not done yet, until we have talked about <a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</a> (CSP). It&rsquo;s feature supported by modern browsers to regulate trusted sources of scripts, stylesheets, fonts. It&rsquo;s the ultimate defense against XSS and insecure script execution on the pages. Big products like GitHub, Twitter and GMail are using it. <strong>Lotus is the first Ruby web framework that makes CSP a default</strong>.</p>
+
+<h3>Clickhijacking</h3>
+
+<p>It&rsquo;s an <a href="http://en.wikipedia.org/wiki/Clickjacking">attack</a> that leads users to click on an invisible evil item. The trick is to embed a trusted web page via an iframe, so the user believes to interact with it, but instead their actions are hijacked by a harmful context.</p>
+
+<p>The solution is to send a <a href="https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet#X-Frame-Options_Header_Types">HTTP header</a> (<code>X-Frame-Options</code>) that regulates which source can embed your web application resources. <strong>Again, Lotus is the first Ruby web framework that enables this defense by default</strong>.</p>
+
+<h2>Features</h2>
+
+<p>With this release we have shipped powerful features to make the experience with Lotus more and more frictionless.</p>
+
+<h3>Action generators</h3>
+
+<p>While developing a feature that requires an new endpoint, it can be inconvenient to write all the required code by hand. It just breaks the flow.</p>
+
+<p>To solve this problem, we have introduced <strong>a new command line utility</strong>: <code>lotus generate action</code>. It produces an action, a view, a template, a route and their related testing code.</p>
+
+<h3>Improved application generator</h3>
+
+<p>We have improved the application generator to allow Lotus applications to meet developers&rsquo; needs.</p>
+
+<p>The command now accepts <code>--database</code> command line argument to setup the database of choice. Example <code>lotus new bookshelf --database=postgresql</code>.</p>
+
+<p>Another point of extension is the <code>--test</code> argument. It generates setup code for Minitest (default) or RSpec. Example <code>lotus new bookshelf --test=rspec</code>.</p>
+
+<p>We added the chance to generate an application for existing code base. Think of <strong>a Ruby gem that needs a web UI</strong>, with <code>lotus new .</code> it&rsquo;s now possible.</p>
+
+<h3>Database console</h3>
+
+<p>As last command line facility, we want to introduce <code>lotus db console</code>, a database REPL.</p>
+
+<h3>Helpers</h3>
+
+<p>Today we have released a new framework in the Lotus family: <code>lotus-helpers</code>. By following our tradition, it&rsquo;s <strong>shipped as a standalone gem</strong> that can be used to enhance views, templates and helpers in Ruby applications, even outside of Lotus.</p>
+
+<p>It delivers a <strong>HTML5 markup generator</strong> and <strong>routing helpers</strong>. On the security front, it brings HTML, HTML attribute and URL <strong>escape functions</strong> that follow OWASP/ESAPI suggestions.</p>
+
+<h3>Additional features</h3>
+
+<p>Database transactions, <strong>Interactors</strong>, logger and safe nested param access are only a few of the <a href="https://github.com/lotus/lotus/blob/master/FEATURES.md">features</a> that are available as of today with 0.3.0.</p>
+
+<h3>Acknowledgments</h3>
+
+<p>We want to say thank you to Alfonso Uceda Pompa, Linus Pettersson, Huy Đỗ, Hiếu Nguyễn, Tom Kadwill, Jimmy Zhang, and all the <a href="/community">wonderful people</a> that are making Lotus a better place every day.</p>
+
+<h2>What&rsquo;s next</h2>
+
+<p>We are already developing new functionalities for the next release: database migrations, form helpers, number formatters, CSRF protection and <a href="http://bit.ly/lotusrb-roadmap">more</a>.</p>
+
+<div style="display: inline">
+  <iframe src="https://ghbtns.com/github-btn.html?user=lotus&repo=lotus&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+  <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="Announcing Lotus v0.3.0" data-url="http://lotusrb.org/blog/2015/03/23/announcing-lotus-030.html" data-count="horizontal" data-style="facebook">Vote on Hacker News</a>
+  <script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+</div>
+]]></content>
+     </entry>
      <entry>
        <title>Weekly Changelog</title>
        <id>http://lotusrb.org/blog/2015/03/22/weekly-changelog.html</id>
