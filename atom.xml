@@ -4,13 +4,101 @@
    <subtitle>Lotus framework blog</subtitle>
    <link href="http://lotusrb.org/atom.xml" rel="self"/>
    <link href="http://lotusrb.org/blog"/>
-   <updated>2015-03-08T10:29:00+01:00</updated>
+   <updated>2015-03-22T09:10:00+01:00</updated>
    <id>http://lotusrb.org/blog</id>
    <author>
      <name>Lotus</name>
      <email>admin@lotusrb.org</email>
    </author>
 
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://lotusrb.org/blog/2015/03/22/weekly-changelog.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/03/22/weekly-changelog.html"/>
+       <updated>2015-03-22T09:10:00+01:00</updated>
+       <author>
+         <name>Trung Lê</name>
+       </author>
+       <summary>
+         Changelog from Mar 16th to Mar 22nd 2015
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Releases</h2>
+
+<p>-</p>
+
+<h2>Completed</h2>
+
+<ul>
+<li>Introduced action generator [<a href="https://github.com/lotus/lotus/pull/166">details</a>]</li>
+<li>Bumped lotus-model dependency to 0.3 for new app  [<a href="https://github.com/lotus/lotus/commit/a1a5ee00eaf1189906c625c7f8f72e8e248be02e">details</a>]</li>
+<li>Renamed <code>default_cookie_options</code> to <code>cookies</code> [<a href="https://github.com/lotus/controller/commit/0f851685e3f3dfe3c14c2f8a2bbbc414b7faa3d3">details</a>]</li>
+<li>Improved error messages for undefined method in view [<a href="https://github.com/lotus/view/pull/63">details</a>]</li>
+<li>Allow Action to disable layout [<a href="https://github.com/lotus/view/pull/65">details</a>]</li>
+<li>Make flash session to persist between requests [<a href="https://github.com/lotus/controller/pull/96">details</a>]</li>
+</ul>
+
+<h2>Development</h2>
+
+<ul>
+<li>Database migrations [<a href="https://github.com/lotus/model/pull/144">details</a>]</li>
+<li>Application generator [<a href="https://github.com/lotus/lotus/pull/181">details</a>]</li>
+<li>Form helpers [<a href="https://github.com/lotus/helpers/pull/16">details</a>]</li>
+<li>Number formatting helpers [<a href="https://github.com/lotus/helpers/pull/11">details</a>]</li>
+<li>Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
+     <entry>
+       <title>Weekly Changelog</title>
+       <id>http://lotusrb.org/blog/2015/03/15/weekly-changelog.html</id>
+       <link rel="alternate" href="http://lotusrb.org/blog/2015/03/15/weekly-changelog.html"/>
+       <updated>2015-03-15T10:29:00+01:00</updated>
+       <author>
+         <name>Trung Lê</name>
+       </author>
+       <summary>
+         Changelog from Mar 8th to Mar 15th 2015
+
+       </summary>
+       <content type="html"><![CDATA[<h2>Releases</h2>
+
+<ul>
+<li>lotus-utils to v0.3.5</li>
+</ul>
+
+<h2>Completed</h2>
+
+<ul>
+<li>Allow specifying controller for resources routing [<a href="https://github.com/lotus/router/pull/45">details</a>]</li>
+<li>Stop sending nil value to DB when creating new record [<a href="https://github.com/lotus/model/pull/81">details</a>]</li>
+<li>Use Lotus::Utils Boolean class within model [<a href="https://github.com/lotus/model/pull/160">details</a>]</li>
+<li>redirect_to now halt the request [<a href="https://github.com/lotus/controller/pull/94">details</a>]</li>
+<li>Introduced <code>Lotus::Interactor</code> and <code>Lotus::Utils::BasicObject</code> [<a href="https://github.com/lotus/utils/commit/0b83e837174eaa3684b7923f60ce609c65555c99">details</a>]</li>
+<li>Lotus::Helpers integration in Lotus [<a href="https://github.com/lotus/lotus/pull/175">details</a>]</li>
+</ul>
+
+<h2>Development</h2>
+
+<ul>
+<li>Database migrations [<a href="https://github.com/lotus/model/pull/144">details</a>]</li>
+<li>Action generator [<a href="https://github.com/lotus/lotus/pull/166">details</a>]</li>
+<li>Application generator [<a href="https://github.com/lotus/lotus/pull/181">details</a>]</li>
+<li>Form helpers [<a href="https://github.com/lotus/helpers/pull/16">details</a>]</li>
+<li>Number formatting helpers [<a href="https://github.com/lotus/helpers/pull/11">details</a>]</li>
+<li>Custom validations [<a href="https://github.com/lotus/validations/pull/49">details</a>]</li>
+<li>Make flash session to persist between requests [<a href="https://github.com/lotus/controller/pull/96">details</a>]</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p><a href="http://bit.ly/lotusrb-roadmap">Trello board</a></p>
+]]></content>
+     </entry>
      <entry>
        <title>Weekly Changelog</title>
        <id>http://lotusrb.org/blog/2015/03/08/weekly-changelog.html</id>
