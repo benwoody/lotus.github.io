@@ -53,7 +53,7 @@ Lotus wants to increase the level of awareness around this topic and provide def
 
 <p>It&rsquo;s an <a href="http://en.wikipedia.org/wiki/Clickjacking">attack</a> that leads users to click on an invisible evil item. The trick is to embed a trusted web page via an iframe, so the user believes to interact with it, but instead their actions are hijacked by a harmful context.</p>
 
-<p>The solution is to send a <a href="https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet#X-Frame-Options_Header_Types">HTTP header</a> (<code>X-Frame-Options</code>) that regulates which source can embed your web application resources. <strong>Again, Lotus is the first Ruby web framework that enables this defense by default</strong>.</p>
+<p>The solution is to send a <a href="https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet#X-Frame-Options_Header_Types">HTTP header</a> (<code>X-Frame-Options</code>) that regulates which source can embed your web application resources. <del><strong>Again, Lotus is the first Ruby web framework that enables this defense by default</strong>.</del></p>
 
 <h2>Features</h2>
 
@@ -102,6 +102,10 @@ Lotus wants to increase the level of awareness around this topic and provide def
 
   <a href="https://news.ycombinator.com/submit" class="hn-button" data-title="Announcing Lotus v0.3.0" data-url="http://lotusrb.org/blog/2015/03/23/announcing-lotus-030.html" data-count="horizontal" data-style="facebook">Vote on Hacker News</a>
   <script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+  <script type="text/javascript">
+    reddit_url = "http://lotusrb.org/blog/2015/03/23/announcing-lotus-030.html";
+  </script>
+  <script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
 </div>
 ]]></content>
      </entry>
